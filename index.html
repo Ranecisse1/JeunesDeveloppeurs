@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme de Formation - Jeunes Développeurs Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Conteneur du diaporama -->
+    <div class="slideshow-container">
+        <img src="Youtube.png" class="active" alt="Youtube">
+        <img src="Batiment.png" alt="Batiment">
+        <img src="Trading.png" alt="Trading">
+        <img src="Comptabilitè.png" alt="Comptabilitè">
+        <img src="Bureautique.png" alt="Bureautique">
+        <img src="Cryptomonnaie.png" alt="Cryptomonnaie">
+        <img src="Gestion projet.png" alt="gestion_projet">
+        <img src="Marketing Digital.png" alt="Marketing Digital">
+        <img src="Parler Anglais.png" alt="Anglais">
+        <img src="Montage Vidéo.png" alt="Montage Vidéo">
+        <img src="Programmation.png" alt="Programmation">
+        <img src="Wordpress.png" alt="WordPress">
+        <img src="ecommerce.png" alt="E-commerce">
+        <img src="IA.png" alt="IA">
+        <img src="Canva.png" alt="Canva">
+    </div>
+
+    <!-- Logo et nom du groupe -->
+    <header>
+        <img src="JD Logo.jpg" alt="Jeunes Développeurs Service" class="logo">
+        <h1>Jeunes Développeurs Service</h1>
+        <a href="https://wa.me/221776339727" target="_blank" class="contact-button">Contactez-nous</a>
+    </header>
+
+    <!-- Lien vers les chaînes WhatsApp et YouTube -->
+    <section class="social-media">
+        <h2>Suivez-nous sur</h2>
+        <a href="https://whatsapp.com/channel/0029VacprpyBqbrEVBaBIw2g" target="_blank">WhatsApp</a> |
+        <a href="https://youtu.be/pZHT3ojZ1wg?si=IjZk8VyUo_KLmNZw" target="_blank">YouTube</a>
+    </section>
+    
+    <!-- Formulaire de formation -->
+    <form id="formationForm" action="mailto:formationtech057@gmail.com" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="Prénom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="Nom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="Email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Numéro de téléphone :</label>
+            <input type="tel" id="telephone" name="Téléphone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="formation">Choix de formation :</label><br>
+        <select id="formation" name="Formation" required>
+            <option value="canva">Canva</option>
+            <option value="youtube">Chaîne YouTube</option>
+            <option value="btp">Bâtiment et Travaux Publics</option>
+            <option value="bureautique">La bureautique</option>
+            <option value="comptabilite">Comptabilité et Gestion</option>
+            <option value="cryptomonnaie">Cryptomonnaie</option>
+            <option value="ecommerce">E-commerce et Dropshipping</option>
+            <option value="gestion_projet">Gestion de Projet</option>
+            <option value="infographie">Infographie Design graphisme</option>
+            <option value="anglais">Langue Anglaise</option>
+            <option value="marketing_digital">Marketing digital et Communication</option>
+            <option value="montage_video">Montage Vidéo</option>
+            <option value="programmation">Programmation Informatique</option>
+            <option value="trading">Trading</option>
+            <option value="wordpress">WordPress</option>
+            <option value="ia">Intelligence Artificielle</option>
+        </select><br><br>
+
+        </div>
+
+        <div class="form-group">
+            <label for="capture_paiement">Payement Wave ou Orange Money à 3000f :</label>
+            <p>Faites une capture d'écran de votre payement, sinon vous ne serez pas contacté et vous ne recevrez pas la formation.</p>
+            <input type="file" id="capture_paiement" name="Capture_Paiement" accept=".jpg, .jpeg, .png" required>
+        </div>
+
+        <button type="submit" class="submit-button">Envoyer</button>
+    </form>
+
+    <!-- JavaScript pour le diaporama -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slideshow-container img');
+
+        function showSlides() {
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].classList.add('active');
+
+            setTimeout(showSlides, 3000); // Change l'image toutes les 3 secondes
+        }
+
+        showSlides();
+    </script>
+</body>
+</html>
